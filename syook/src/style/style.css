@@ -1,0 +1,60 @@
+
+#navbardiv{
+    width:100%;
+    height:50px;
+    background-color:black;
+    margin-top: 0px;
+    display: flex;
+   
+}
+ul li{
+    display: inline;
+    float: left;
+
+ 
+    
+}
+ul li a{
+    
+    margin-left: 32px;
+}
+a{
+    color: white;
+    text-decoration: none;
+   
+}
+.parentDiv{
+    width: 100%;
+    margin-top: 2%;
+    height:500px;
+    border:none;
+    display: flex;
+}
+.apiDiv{  
+    display: grid;
+    width:68%;
+    height:100%;
+    border: none;
+    margin-left: 0.4%;
+  
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2%;
+}
+.apiDiv>div{
+    border: 1px solid green;
+    
+}
+
+.polldiv{
+    width:30%;
+    height:100%;
+    border:1px solid yellow;
+}
+
+.imageDiv{
+    width:100%;
+    height:90%;
+}
+
+
+
