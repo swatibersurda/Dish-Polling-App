@@ -1,5 +1,5 @@
 export const Card = ({ item }) => {
-  console.log(item)
+  
   return (
     <div id="child">
       <div id="imageDiv">

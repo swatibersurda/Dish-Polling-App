@@ -1,0 +1,109 @@
+{
+  "userjson": [
+    {
+      "id": 1,
+      "username": "amar",
+      "password": "amar123"
+    },
+    {
+      "id": 2,
+      "username": "akbar",
+      "password": "akbar123"
+    },
+    {
+      "id": 3,
+      "username": "antony",
+      "password": "antony123"
+    },
+    {
+      "id": 4,
+      "username": "john",
+      "password": "john123"
+    },
+    {
+      "id": 5,
+      "username": "paul",
+      "password": "paul123"
+    },
+    {
+      "name": "swati",
+      "password": "1212",
+      "id": 6
+    },
+    {
+      "name": "swa",
+      "password": "sdd",
+      "id": 7
+    },
+    {
+      "name": "swa",
+      "password": "sdd",
+      "id": 8
+    },
+    {
+      "name": "kk",
+      "password": "ascF",
+      "id": 9
+    },
+    {
+      "name": "kk",
+      "password": "ascF",
+      "id": 10
+    },
+    {
+      "name": "kk",
+      "password": "ascF",
+      "id": 11
+    },
+    {
+      "name": "kamal haries",
+      "password": "xbvx",
+      "id": 12
+    },
+    {
+      "name": "v v",
+      "password": "VCvz",
+      "id": 13
+    },
+    {
+      "name": "deepak",
+      "password": "fdfs",
+      "id": 14
+    },
+    {
+      "name": "vbxcvZ",
+      "password": " zV ",
+      "id": 15
+    },
+    {
+      "name": "bxxc",
+      "password": "Fcfg",
+      "id": 16
+    },
+    {
+      "name": "fdf",
+      "password": "vg",
+      "id": 17
+    },
+    {
+      "name": "caa",
+      "password": "DFx",
+      "id": 18
+    },
+    {
+      "name": "raju Prajapati",
+      "password": "xcfxf",
+      "id": 19
+    },
+    {
+      "name": "VXXXV",
+      "password": "21321",
+      "id": 20
+    },
+    {
+      "name": "BVB",
+      "password": "BCV",
+      "id": 21
+    }
+  ]
+}

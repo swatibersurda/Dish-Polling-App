@@ -35,7 +35,7 @@ a{
     width:68%;
     height:100%;
     border: none;
-    margin-left: 0.4%;
+    margin-left: 3%;
   
     grid-template-columns: repeat(3,1fr);
     grid-gap: 2%;
@@ -46,15 +46,11 @@ a{
 }
 
 .polldiv{
-    width:30%;
+    width:25%;
     height:100%;
     border:1px solid yellow;
 }
 
-.imageDiv{
-    width:100%;
-    height:90%;
-}
 
 
 

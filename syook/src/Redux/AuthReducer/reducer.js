@@ -1,6 +1,6 @@
 import * as Types from "./actionType";
 const initialState = {
-    userRegistered: [],
+    
     isLoading: false,
     isError: false,
     currentUser:{}
@@ -18,7 +18,7 @@ export const reducer = (state = initialState, action) => {
         case Types.LOGIN_USER_SUCESS: {
             return {
                 ...state,
-                userRegistered: [...state.userRegistered, action.payload],
+               
                 currentUser:action.payload,
                 isLoading: false
             }

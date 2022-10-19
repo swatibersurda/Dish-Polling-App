@@ -9,3 +9,9 @@ export const getData=()=>(dispatch)=>{
         dispatch({type:Types.GET_DATA_FAILURE})
     })
 }
+
+
+export const storeUser=(payload)=>(dispatch)=>{
+    // console.log(payload,"userstore")
+    dispatch({type:Types.STORED_USER_RANK,payload:payload})
+}
