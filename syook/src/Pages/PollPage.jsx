@@ -40,13 +40,13 @@ export const PollPage = () => {
                 [rankTwo]: 20,
                 [rankThree]: 10,
             }
-            console.log(rankOne, rankTwo, rankThree, user);
+            // console.log(rankOne, rankTwo, rankThree, user);
             arr.push(userSelectedData);
             localStorage.setItem("PolledData", JSON.stringify(arr))
         }
 
         //   NAVIGATE USER TO resultpage
-        navigate("/resultpage", { replace: true })
+        navigate("/resultpage", { replace: true });
 
 
 

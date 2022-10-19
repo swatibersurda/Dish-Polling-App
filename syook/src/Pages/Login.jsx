@@ -11,9 +11,9 @@ export const Login = () => {
     const store=useSelector((state)=>state.AuthReducer.userRegistered);
     const user=useSelector((state)=>state.AuthReducer. currentUser);
     const navigate=useNavigate();
-    console.log(store);
-    console.log(name, password);
-    console.log(user,"LGINAGE")
+    // console.log(store);
+    // console.log(name, password);
+    // console.log(user,"LGINAGE")
 
     const handleData=(e)=>{
         e.preventDefault();
