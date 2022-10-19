@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { NavBar } from "./NavBar";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export const ResultPage = () => {
     // first get the data from the store
@@ -8,9 +9,13 @@ export const ResultPage = () => {
     const user = useSelector((state) => state.AuthReducer.currentUser);
     // here getting data from localstorage so that we can find user and edit it.
     const [savedUserRank,setSavedUserRank]=useState( JSON.parse(localStorage.getItem('PolledData')));
+    // A USESTATE FOR SHOWING TOP RANKED IN DESCENDING ORDER.
+    const [toppedRanked,setTopedRanked]=useState([]);
     const [rankOne, setRankOne] = useState("");
     const [rankTwo, setRankTwo] = useState("");
     const [rankThree, setRankThree] = useState("");
+    console.log(savedUserRank,"localstoragedat")
+    console.log(toppedRanked,"unn")
 
     const handleData = (e) => {
         e.preventDefault();
@@ -38,10 +43,59 @@ export const ResultPage = () => {
                     savedData.push(item);
                 }
             })
-           console.log(x);
+        
            localStorage.setItem("PolledData",JSON.stringify(savedData))
+           
         }
+        var x=JSON.parse(localStorage.getItem("PolledData"));
+        setSavedUserRank(x);
     }
+    useEffect(()=>{
+        const uniqueKey={};
+        const keys=[];
+        const value=[];
+       
+        if(savedUserRank.length>0){
+            savedUserRank.map((item)=>{
+                
+                let keyss=Object.keys(item);
+                
+                // FORLOOP ON KEEYS SO WE CAN FIND THE UNIQUE KEY
+                keyss.map((item)=>{
+                 keys.push(item);
+                   
+                })
+            
+                let val=Object.values(item);
+                // console.log(val);
+                val.map((item)=>{
+                    value.push(item);
+                      
+                   })
+            })
+        }
+        // console.log(keys);
+        // console.log(value);
+    //    console.log(uniqueKey,"uniquekeyy")
+      for(var i=0;i<keys.length;i++){
+        let x=keys[i];
+        if(uniqueKey[x]===undefined){
+            uniqueKey[x]=value[i];
+        }
+        else{
+            uniqueKey[x]=uniqueKey[x]+value[i]
+        }
+      }
+    // console.log(uniqueKey,"kkk")
+    
+    setTopedRanked(uniqueKey)
+    if(toppedRanked){
+        toppedRanked.sort((a,b)=>{
+            
+        })
+    }
+    },[])
+   
 
    return (
         <div>
@@ -82,7 +136,7 @@ export const ResultPage = () => {
 
                 </div>
                 <div className="polledResults">
-
+                
                 </div>
 
             </div>
