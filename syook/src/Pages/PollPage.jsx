@@ -31,6 +31,7 @@ export const PollPage = () => {
         // refresh it will be wipe off
         let arr = JSON.parse(localStorage.getItem('PolledData')) || [];
         let userSelectedData = {};
+        // let userChoice={};
 
         if (rankOne && rankTwo && rankThree && user) {
             // {[dyanmicKey]: val}
@@ -43,20 +44,13 @@ export const PollPage = () => {
             // console.log(rankOne, rankTwo, rankThree, user);
             arr.push(userSelectedData);
             localStorage.setItem("PolledData", JSON.stringify(arr))
+            // this to make users choice so we can refleact it on the page.
+            localStorage.setItem("UserChoice",JSON.stringify(userSelectedData))
         }
 
         //   NAVIGATE USER TO resultpage
         navigate("/resultpage", { replace: true });
-
-
-
     }
-
-
-
-
-
-
     return (
         <div>
             <NavBar />
@@ -95,8 +89,6 @@ export const PollPage = () => {
 
                         <input type={"submit"} value="Your Submission" />
                     </form>
-
-
                 </div>
                 <div className="apiDiv">
                     {data.length > 0 && data.map((item) => {

@@ -7,14 +7,17 @@ export const ResultPage = () => {
     const data = useSelector((state) => state.AppReducer.data);
     const user = useSelector((state) => state.AuthReducer.currentUser);
     const [savedUserRank, setSavedUserRank] = useState(JSON.parse(localStorage.getItem('PolledData')));
-    const [toppedRanked, setTopedRanked] = useState([]);
+    const [toppedRanked, setTopedRanked] = useState();
+    const [desending, setDesendin] = useState();
     const [rankOne, setRankOne] = useState("");
     const [rankTwo, setRankTwo] = useState("");
     const [rankThree, setRankThree] = useState("");
-    // console.log(typeof toppedRanked, "unn")
+    console.log(savedUserRank, "saveduser");
+    // console.log(toppedRanked, "unn");
+    // console.log(desending, "des");
 
 
-  
+
 
 
 
@@ -23,7 +26,8 @@ export const ResultPage = () => {
 
         // here using filter we will find user based on his/her id and try to edit it.
         if (savedUserRank && user) {
-            var savedData = [];
+            let savedData = [];
+            let userChoice = {};
             const x = savedUserRank.filter((item) => {
                 if (item.id === user.id) {
                     // if that paticular user found then please edit it and store it inside savedData array.
@@ -36,6 +40,8 @@ export const ResultPage = () => {
                         [rankThree]: 10,
                     }
                     savedData.push(userSelectedData)
+                    // here setting user's edited choice on ls
+                    localStorage.setItem("UserChoice", JSON.stringify(userSelectedData))
 
                 }
                 else {
@@ -51,14 +57,12 @@ export const ResultPage = () => {
         var x = JSON.parse(localStorage.getItem("PolledData"));
         setSavedUserRank(x);
     }
+
     useEffect(() => {
-
+        //   an empty object where we will put here so that we can add the key value and add it up.
         const met = {};
-
-
         if (savedUserRank.length > 0) {
             savedUserRank.map((item) => {
-
                 let keyss = Object.keys(item);
                 for (const [key, value] of Object.entries(item)) {
                     var keyy = key;
@@ -69,16 +73,10 @@ export const ResultPage = () => {
                         else {
                             met[keyy] = met[keyy] + value;
                         }
-
                     }
                 }
-
             })
-            console.log(met, "i am met");
             setTopedRanked(met);
-
-            // I am doing sorting here on based of .sort method
-
             let sortable = [];
             for (var key in toppedRanked) {
                 sortable.push([key, toppedRanked[key]]);
@@ -87,25 +85,27 @@ export const ResultPage = () => {
             sortable.sort(function (a, b) {
                 return a[1] - b[1];
             });
-            console.log("sortable", sortable);
+            // console.log("sortable", sortable);
 
         }
-    }, [])
+        // if user edit do render again and if the data is changed on polledData array.
+    }, [savedUserRank])
 
     useEffect(() => {
         if (toppedRanked) {
+            // sortable is a array.
             let sortable = [];
             for (var key in toppedRanked) {
                 sortable.push([key, toppedRanked[key]]);
             }
-            if (sortable) console.log("raju")
             sortable.sort(function (a, b) {
                 return b[1] - a[1];
             });
             console.log("sortable", sortable);
-            setTopedRanked(sortable)
+            setDesendin(sortable);
         }
     }, [toppedRanked])
+
 
 
     return (
@@ -147,8 +147,10 @@ export const ResultPage = () => {
 
                 </div>
                 <div className="polledResults">
-                    {toppedRanked && toppedRanked.map(el => {
-                        return el;
+                    {desending && desending.map((item) => {
+
+                        return <h1>{item[0]}{item[1]}</h1>
+
                     })}
                 </div>
 

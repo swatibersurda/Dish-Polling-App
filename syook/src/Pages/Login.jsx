@@ -22,13 +22,14 @@ export const Login = () => {
               payload={
                    name,password
               }
-        }
-        dispatch(LoginUser(payload)).then((res)=>{
+              dispatch(LoginUser(payload)).then((res)=>{
            
-            if(res.type===LOGIN_USER_SUCESS){
-                navigate("/pollpage",{replace:true})
-            }
-        })
+                if(res===LOGIN_USER_SUCESS){
+                    navigate("/pollpage",{replace:true})
+                }
+            })
+        }
+        
        
     }
 

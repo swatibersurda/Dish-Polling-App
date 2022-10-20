@@ -1,7 +1,6 @@
 import * as Types from "./actionType";
 const initialState={
     data:[],
-    // storedRank:[],
     isLoading:false,
     isError:false
 }
@@ -28,15 +27,7 @@ export const reducer=(state=initialState,action)=>{
                 
             }
         }
-        // case Types.STORED_USER_RANK:{
-        //     return{
-        //         ...state,
-        //         storedRank:[...state.storedRank,action.payload]
-        //     }
-        // }
-
-
-
+       
         default:
             return state
     }

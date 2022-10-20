@@ -5,9 +5,11 @@ export const LoginUser = (payload) => (dispatch, getState) => {
 
     dispatch({ type: Types.LOGIN_USER_REQUEST })
     return axios.post(" http://localhost:8080/userjson", payload).then((res) => {
-        return dispatch({ type: Types.LOGIN_USER_SUCESS, payload: res.data})
+        dispatch({ type: Types.LOGIN_USER_SUCESS, payload: res.data})
+        return Types.LOGIN_USER_SUCESS
     }).catch((err) => {
-        return dispatch({ type: Types.LOGIN_USER_FAILURE })
+         dispatch({ type: Types.LOGIN_USER_FAILURE })
+         return Types.LOGIN_USER_FAILURE
     })
 
 
