@@ -6,15 +6,21 @@ import { useEffect } from "react";
 export const ResultPage = () => {
     const data = useSelector((state) => state.AppReducer.data);
     const user = useSelector((state) => state.AuthReducer.currentUser);
-    const [savedUserRank, setSavedUserRank] = useState(JSON.parse(localStorage.getItem('PolledData')));
+    const [savedUserRank, setSavedUserRank] = useState(JSON.parse(localStorage.getItem('PolledData')) || []);
+    // a usestate for seeing users choice so we can itrate over it because you need to iterate over it so first need to get in useeFFECT AND STORE IN FORM 
+    // OF ARRAY INSIDE USERSCHOICE.
+    const [userChoice, setUsersChoice] = useState([]);
+    const [final, setFinal] = useState();
+    // console.log(userChoice, "USERCHOICE");
     const [toppedRanked, setTopedRanked] = useState();
     const [desending, setDesendin] = useState();
     const [rankOne, setRankOne] = useState("");
     const [rankTwo, setRankTwo] = useState("");
     const [rankThree, setRankThree] = useState("");
-    console.log(savedUserRank, "saveduser");
+    // console.log(savedUserRank, "saveduser");
     // console.log(toppedRanked, "unn");
     // console.log(desending, "des");
+    // console.log(final, "final")
 
 
 
@@ -32,16 +38,16 @@ export const ResultPage = () => {
                 if (item.id === user.id) {
                     // if that paticular user found then please edit it and store it inside savedData array.
                     // console.log("hii")
-                    let userSelectedData={};
+                    let userSelectedData = {};
                     userSelectedData = {
                         id: user.id,
                         [rankOne]: 30,
-                        [rankTwo] : rankOne === rankTwo ? 30 : 20,
-                        [rankThree] : rankThree===rankOne ? 30:rankTwo === rankThree ? 20 :10,
+                        [rankTwo]: rankOne === rankTwo ? 30 : 20,
+                        [rankThree]: rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
                     }
 
-                   
-                         console.log(userSelectedData,"oo")
+
+                    // console.log(userSelectedData, "oo")
                     savedData.push(userSelectedData)
                     // here setting user's edited choice on ls
                     localStorage.setItem("UserChoice", JSON.stringify(userSelectedData))
@@ -79,6 +85,7 @@ export const ResultPage = () => {
                     }
                 }
             })
+
             setTopedRanked(met);
 
             // console.log("sortable", sortable);
@@ -97,10 +104,56 @@ export const ResultPage = () => {
             sortable.sort(function (a, b) {
                 return b[1] - a[1];
             });
-            console.log("sortable", sortable);
+            // console.log("sortable", sortable);/
             setDesendin(sortable);
         }
     }, [toppedRanked])
+
+    useEffect(() => {
+
+        let choice = JSON.parse(localStorage.getItem("UserChoice"));
+        let arr = [];
+        for (let key in choice) {
+            if (key !== 'id') {
+                // {id:1,lasgna:30:fish:20} need to store only dishes name that is the reason not taken id
+                arr.push(key);
+            }
+
+        }
+        setUsersChoice(arr);
+
+    }, [desending])
+
+    useEffect(() => {
+        let arr=[];
+       
+        if (desending && userChoice) {
+            for(var i=0;i<desending.length;i++){
+                var flag=false;
+                for(var j=0;j<userChoice.length;j++){
+                    if(desending[i][0]===userChoice[j]){
+                         arr.push([desending[i][0],desending[i][1],"your choice"])
+                        flag=true;
+                        break;
+                    }
+                    else{
+                        flag=false;
+                        continue
+                    }
+                }
+                if(!flag){
+                    arr.push([desending[i][0],desending[i][1]])
+                }
+                
+            }
+          
+        }
+        console.log(desending,"ddddd");
+        console.log(userChoice,"userccccc")
+        console.log(arr,"arrrrrrrrrrrrr")
+        setFinal(arr);
+    },[desending, userChoice])
+
 
 
 
@@ -143,11 +196,28 @@ export const ResultPage = () => {
 
                 </div>
                 <div className="polledResults">
-                    {desending && desending.map((item) => {
+                    {/* {desending && userChoice.map((item) => {
+                        console.log(userChoice)
+                        desending.map((des) => {
+                            return item === des[0] ? <h1>{des[0]}{des[1]}</h1>:<p>{des[0]}{des[1]}</p>
 
-                        return <h1>{item[0]}{item[1]}</h1>
 
-                    })}
+
+                        })
+                    })}  */}
+                   
+                   {/* categories = categories.map(category =>
+                     category.subcategories.map((subcategory, i) => <h2 key={i}>{subcategory.name}</h2>)
+                    ); */}
+                     {final && final.map((item)=>{
+                    // return {item[2]==true?<h1>{item[0]}{item[1]}</h1>:<h1>{item[0]}{item[1]}</h1>}
+                    return <h1>{item[0]}{item[1]}{item[2]}</h1>
+                    })} 
+
+                
+
+                
+
                 </div>
 
             </div>
