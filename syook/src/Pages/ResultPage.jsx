@@ -32,13 +32,16 @@ export const ResultPage = () => {
                 if (item.id === user.id) {
                     // if that paticular user found then please edit it and store it inside savedData array.
                     // console.log("hii")
-                    let userSelectedData;
+                    let userSelectedData={};
                     userSelectedData = {
                         id: user.id,
                         [rankOne]: 30,
-                        [rankTwo]: 20,
-                        [rankThree]: 10,
+                        [rankTwo] : rankOne === rankTwo ? 30 : 20,
+                        [rankThree] : rankThree===rankOne ? 30:rankTwo === rankThree ? 20 :10,
                     }
+
+                   
+                         console.log(userSelectedData,"oo")
                     savedData.push(userSelectedData)
                     // here setting user's edited choice on ls
                     localStorage.setItem("UserChoice", JSON.stringify(userSelectedData))
@@ -54,7 +57,7 @@ export const ResultPage = () => {
             localStorage.setItem("PolledData", JSON.stringify(savedData))
 
         }
-        var x = JSON.parse(localStorage.getItem("PolledData"));
+        var x = JSON.parse(localStorage.getItem("PolledData")) || savedUserRank;
         setSavedUserRank(x);
     }
 
@@ -77,14 +80,7 @@ export const ResultPage = () => {
                 }
             })
             setTopedRanked(met);
-            let sortable = [];
-            for (var key in toppedRanked) {
-                sortable.push([key, toppedRanked[key]]);
-            }
 
-            sortable.sort(function (a, b) {
-                return a[1] - b[1];
-            });
             // console.log("sortable", sortable);
 
         }
