@@ -126,7 +126,7 @@ export const ResultPage = () => {
                 let flag = false;
                 for (let j = 0; j < userChoice.length; j++) {
                     if (desending[i][0] === userChoice[j]) {
-                        arr.push([desending[i][0], desending[i][1], "your choice"])
+                        arr.push([desending[i][0], desending[i][1], "Your Choice"])
                         flag = true;
                         break;
                     }
@@ -136,7 +136,7 @@ export const ResultPage = () => {
                     }
                 }
                 if (!flag) {
-                    arr.push([desending[i][0], desending[i][1]])
+                    arr.push([desending[i][0], desending[i][1],"Others Choice "])
                 }
 
             }
@@ -154,7 +154,8 @@ export const ResultPage = () => {
             {/* nav bar placeing */}
             <NavBar />
             <div className="resultParentDiv">
-                <div className="editPollPage"> 
+                <div className="polldiv">
+                    <p className="headingPollPage">Edit Poll Here</p>
                     <form onSubmit={handleData}>
                         <div id="firstRank">
                             <select onChange={(e) => setRankOne(e.target.value)}>
@@ -183,18 +184,40 @@ export const ResultPage = () => {
                                 })}
                             </select>
                         </div>
-                        <input type={"submit"} value="Edit Your Submission" />
+                        <input className="selctInputPollpage" type={"submit"} value="Edit Your Submission" />
                     </form>
 
 
-                    </div>
-                    <div className="polledResults"> 
-                                     
-                    {final && final.map((item) => {
+                </div>
+                <div className="polledResults">
+                    <h1>Final Polled Result</h1>
+                    <table>
+
+                       
+                            <th>DishName</th>
+                            <th>Score</th>
+                            <th>Selection By</th>
                         
-                        return <h1 key={item[0]}>{item[0]}{item[1]}{item[2]}</h1>
-                    })}
-                    
+
+
+
+                        {final && final.map((item) => {
+
+                            // return <h1 key={item[0]}>{item[0]}{item[1]}{item[2]}</h1>
+                            return <tbody>
+                                <tr key={item[0]}>
+                                    <td>{item[0]}</td>
+                                    <td>{item[1]}</td>
+                                    <td>{item[2]}</td>
+                                </tr>
+
+
+
+                            </tbody>
+
+                        })}
+                    </table>
+
 
 
 
