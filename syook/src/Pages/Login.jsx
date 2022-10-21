@@ -31,14 +31,14 @@ export const Login = () => {
 
     return (
         <div className="formmDiv">
-            <h1 className="heading">Please Login Here</h1>
+            <p className="heading">Please Login Here</p>
             <form onSubmit={handleData} className="formm" >
                 {/* <h1 className="heading">Please Login Here</h1> */}
                 <div className="labell">  <label >Enter Name:</label></div>
-              
+
                 <input className="inputt" type={"text"} value={name} onChange={(e) => setName(e.target.value)} required />
                 <div className="labell"> <label>Enter Password:</label></div>
-               
+
                 <input className="inputt" type={"password"} value={password} onChange={(e) => setPassword(e.target.value)} required />
                 <input className="submitForm" type={"submit"} />
 

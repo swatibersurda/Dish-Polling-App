@@ -1,6 +1,6 @@
 .navBar {
     /* background-image:linear-gradient(to right,crimson,purple,green); */
-    background-color: black;
+    background-color:#4267B2;
     overflow: hidden;
     height: 50px;
 }
@@ -27,6 +27,8 @@
 }
 .heading{
     margin-top: 2%;
+    font-weight: 700;
+    font-size: 32px;
 }
 .inputt{
     width:100%;
@@ -117,43 +119,55 @@ label{
 }
 
 /* navbar responsivness */
-@media only screen and(min-width:378px)and(max-width:768px) {
-    .navBar {
-        /* background-image:linear-gradient(to right,crimson,purple,green); */
-        background-color: black;
-        overflow: hidden;
-        height: 50px;
-        width: 100%;
-    }
 
-    .navBar a {
-        padding: 14px 16px;
-        text-decoration: none;
-        text-align: center;
-        color: white;
-        font-size: 15px;
-        display: block;
-        float: left;
-    }
 
+@media only screen and (min-width:0px) and (max-width:375px){
+    .formmDiv{
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 20px;
+        width:80%;
+        height: 350px;
+        /* margin:auto; */
+        margin-left:5%;
+        margin-top: 27%;
+    }
+    .heading{
+       
+        font-weight: 700;
+        font-size: 28px;
+    }
+}
+@media only screen and (min-width:375px) and (max-width:768px){
+    .formmDiv{
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 20px;
+        width:80%;
+        height: 350px;
+        margin-left:7%;
+        margin-top: 17%;
+    }
+    .heading{
+       
+        font-weight: 700;
+        font-size: 30px;
+    }
 }
 
-@media only screen and(min-width:0px)and(max-width:375px) {
-    .navBar {
-        /* background-image:linear-gradient(to right,crimson,purple,green); */
-        background-color: black;
-        overflow: hidden;
-        height: 50px;
-
+@media only screen and (min-width:768) {
+    .formmDiv{
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 20px;
+        width:35%;
+        height: 350px;
+        margin-left:6%;
+        margin-top: 17%;
     }
-
-    .navBar a {
-        padding: 14px 16px;
-        text-decoration: none;
-        text-align: center;
-        color: white;
-        font-size: 15px;
-        /* display: block; */
-        float: left;
+    .heading{
+       
+        font-weight: 700;
+        font-size: 30px;
     }
 }
