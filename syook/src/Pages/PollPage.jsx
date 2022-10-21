@@ -14,10 +14,6 @@ export const PollPage = () => {
     const [rankThree, setRankThree] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    // console.log(rankOne, rankTwo, rankThree);
-    // console.log(user, "currentuser")
-
-
 
     useEffect(() => {
         if (data.length === 0) {
@@ -26,26 +22,27 @@ export const PollPage = () => {
 
     }, [data.length])
     //  storing here whole user details..........
-    const handleData = () => {
+    const handleData = (e) => {
+        e.preventDefault();
         //   here storing first user selected rank and userid on local storage so that can access on next page otherwise after
         // refresh it will be wipe off
-        let arr = JSON.parse(localStorage.getItem('PolledData')) || [];
+        let arr = JSON.parse(localStorage.getItem('polledData')) || [];
         let userSelectedData = {};
         // let userChoice={};
 
         if (rankOne && rankTwo && rankThree && user) {
             // {[dyanmicKey]: val}
             userSelectedData = {
-                id: user.id,
-                [rankOne]: 30,
-                [rankTwo]: 20,
-                [rankThree]: 10,
+               id: user.id,
+                        [rankOne]: 30,
+                        [rankTwo]: rankOne === rankTwo ? 30 : 20,
+                        [rankThree]: rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
             }
             // console.log(rankOne, rankTwo, rankThree, user);
             arr.push(userSelectedData);
-            localStorage.setItem("PolledData", JSON.stringify(arr))
+            localStorage.setItem("polledData", JSON.stringify(arr))
             // this to make users choice so we can refleact it on the page.
-            localStorage.setItem("UserChoice",JSON.stringify(userSelectedData))
+            localStorage.setItem("userChoice", JSON.stringify(userSelectedData))
         }
 
         //   NAVIGATE USER TO resultpage
@@ -64,7 +61,7 @@ export const PollPage = () => {
                                 <option>SELECT_First_RANK</option>
                                 {data.length > 0 && data.map((item) => {
 
-                                    return <option value={item.dishName}>{item.dishName}</option>
+                                    return <option key={item.id} value={item.dishName}>{item.dishName}</option>
                                 })}
                             </select>
                         </div>
@@ -73,7 +70,7 @@ export const PollPage = () => {
                             <select onChange={(e) => { setRankTwo(e.target.value) }}>
                                 <option value={"none"}>SELECT-SECOND-RANK</option>
                                 {data.length > 0 && data.map((item) => {
-                                    return <option value={item.dishName}>{item.dishName}</option>
+                                    return <option key={item.id} value={item.dishName}>{item.dishName}</option>
                                 })}
                             </select>
                         </div>
@@ -82,7 +79,7 @@ export const PollPage = () => {
                             <select onChange={(e) => { setRankThree(e.target.value) }}>
                                 <option value={"none"}>SELECT-THIRD-RANK</option>
                                 {data.length > 0 && data.map((item) => {
-                                    return <option value={item.dishName}>{item.dishName}</option>
+                                    return <option key={item.id} value={item.dishName}>{item.dishName}</option>
                                 })}
                             </select>
                         </div>
@@ -92,7 +89,7 @@ export const PollPage = () => {
                 </div>
                 <div className="apiDiv">
                     {data.length > 0 && data.map((item) => {
-                        return <div key={item.id}><Card item={item} /></div>
+                        return <div key={item.id}><Card item={item} key={item.id} /></div>
                     })}
                 </div>
 

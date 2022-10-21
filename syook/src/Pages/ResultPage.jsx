@@ -2,25 +2,22 @@ import { useSelector } from "react-redux"
 import { NavBar } from "./NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
+import { EditPage } from "./EditPage";
+import { FinalResultPage } from "./FinalResultPage";
 
 export const ResultPage = () => {
     const data = useSelector((state) => state.AppReducer.data);
     const user = useSelector((state) => state.AuthReducer.currentUser);
-    const [savedUserRank, setSavedUserRank] = useState(JSON.parse(localStorage.getItem('PolledData')) || []);
+    const [savedUserRank, setSavedUserRank] = useState(JSON.parse(localStorage.getItem('polledData')) || []);
     // a usestate for seeing users choice so we can itrate over it because you need to iterate over it so first need to get in useeFFECT AND STORE IN FORM 
     // OF ARRAY INSIDE USERSCHOICE.
     const [userChoice, setUsersChoice] = useState([]);
     const [final, setFinal] = useState();
-    // console.log(userChoice, "USERCHOICE");
     const [toppedRanked, setTopedRanked] = useState();
     const [desending, setDesendin] = useState();
     const [rankOne, setRankOne] = useState("");
     const [rankTwo, setRankTwo] = useState("");
     const [rankThree, setRankThree] = useState("");
-    // console.log(savedUserRank, "saveduser");
-    // console.log(toppedRanked, "unn");
-    // console.log(desending, "des");
-    // console.log(final, "final")
 
 
 
@@ -40,6 +37,7 @@ export const ResultPage = () => {
                     // console.log("hii")
                     let userSelectedData = {};
                     userSelectedData = {
+                        // here with because
                         id: user.id,
                         [rankOne]: 30,
                         [rankTwo]: rankOne === rankTwo ? 30 : 20,
@@ -47,10 +45,10 @@ export const ResultPage = () => {
                     }
 
 
-                    // console.log(userSelectedData, "oo")
+
                     savedData.push(userSelectedData)
                     // here setting user's edited choice on ls
-                    localStorage.setItem("UserChoice", JSON.stringify(userSelectedData))
+                    localStorage.setItem("userChoice", JSON.stringify(userSelectedData))
 
                 }
                 else {
@@ -60,10 +58,10 @@ export const ResultPage = () => {
                 }
             })
 
-            localStorage.setItem("PolledData", JSON.stringify(savedData))
+            localStorage.setItem("polledData", JSON.stringify(savedData))
 
         }
-        var x = JSON.parse(localStorage.getItem("PolledData")) || savedUserRank;
+        var x = JSON.parse(localStorage.getItem("polledData")) || savedUserRank;
         setSavedUserRank(x);
     }
 
@@ -111,7 +109,7 @@ export const ResultPage = () => {
 
     useEffect(() => {
 
-        let choice = JSON.parse(localStorage.getItem("UserChoice"));
+        let choice = JSON.parse(localStorage.getItem("userChoice"));
         let arr = [];
         for (let key in choice) {
             if (key !== 'id') {
@@ -125,34 +123,32 @@ export const ResultPage = () => {
     }, [desending])
 
     useEffect(() => {
-        let arr=[];
-       
+        let arr = [];
+
         if (desending && userChoice) {
-            for(var i=0;i<desending.length;i++){
-                var flag=false;
-                for(var j=0;j<userChoice.length;j++){
-                    if(desending[i][0]===userChoice[j]){
-                         arr.push([desending[i][0],desending[i][1],"your choice"])
-                        flag=true;
+            for (let i = 0; i < desending.length; i++) {
+                let flag = false;
+                for (let j = 0; j < userChoice.length; j++) {
+                    if (desending[i][0] === userChoice[j]) {
+                        arr.push([desending[i][0], desending[i][1], "your choice"])
+                        flag = true;
                         break;
                     }
-                    else{
-                        flag=false;
+                    else {
+                        flag = false;
                         continue
                     }
                 }
-                if(!flag){
-                    arr.push([desending[i][0],desending[i][1]])
+                if (!flag) {
+                    arr.push([desending[i][0], desending[i][1]])
                 }
-                
+
             }
-          
+
         }
-        console.log(desending,"ddddd");
-        console.log(userChoice,"userccccc")
-        console.log(arr,"arrrrrrrrrrrrr")
+
         setFinal(arr);
-    },[desending, userChoice])
+    }, [desending, userChoice])
 
 
 
@@ -162,14 +158,14 @@ export const ResultPage = () => {
             {/* nav bar placeing */}
             <NavBar />
             <div className="resultParentDiv">
-                <div className="editPollPage">
+                <div className="editPollPage"> 
                     <form onSubmit={handleData}>
                         <div id="firstRank">
                             <select onChange={(e) => setRankOne(e.target.value)}>
                                 <option>SELECT_First_RANK</option>
                                 {data.length > 0 && data.map((item) => {
 
-                                    return <option value={item.dishName}>{item.dishName}</option>
+                                    return <option key={item.id} value={item.dishName}>{item.dishName}</option>
                                 })}
                             </select>
                         </div>
@@ -178,45 +174,33 @@ export const ResultPage = () => {
                             <select onChange={(e) => { setRankTwo(e.target.value) }}>
                                 <option value={"none"}>SELECT-SECOND-RANK</option>
                                 {data.length > 0 && data.map((item) => {
-                                    return <option value={item.dishName}>{item.dishName}</option>
+                                    return <option key={item.id} value={item.dishName}>{item.dishName}</option>
                                 })}
                             </select>
                         </div>
-                        {/* third rank div */}
+                        {/* third rank div  */}
                         <div id="thirdRank">
                             <select onChange={(e) => { setRankThree(e.target.value) }}>
                                 <option value={"none"}>SELECT-THIRD-RANK</option>
                                 {data.length > 0 && data.map((item) => {
-                                    return <option value={item.dishName}>{item.dishName}</option>
+                                    return <option key={item.id} value={item.dishName}>{item.dishName}</option>
                                 })}
                             </select>
                         </div>
                         <input type={"submit"} value="Edit Your Submission" />
                     </form>
 
-                </div>
-                <div className="polledResults">
-                    {/* {desending && userChoice.map((item) => {
-                        console.log(userChoice)
-                        desending.map((des) => {
-                            return item === des[0] ? <h1>{des[0]}{des[1]}</h1>:<p>{des[0]}{des[1]}</p>
+
+                    </div>
+                    <div className="polledResults"> 
+                                     
+                    {final && final.map((item) => {
+                        
+                        return <h1 key={item[0]}>{item[0]}{item[1]}{item[2]}</h1>
+                    })}
+                    
 
 
-
-                        })
-                    })}  */}
-                   
-                   {/* categories = categories.map(category =>
-                     category.subcategories.map((subcategory, i) => <h2 key={i}>{subcategory.name}</h2>)
-                    ); */}
-                     {final && final.map((item)=>{
-                    // return {item[2]==true?<h1>{item[0]}{item[1]}</h1>:<h1>{item[0]}{item[1]}</h1>}
-                    return <h1>{item[0]}{item[1]}{item[2]}</h1>
-                    })} 
-
-                
-
-                
 
                 </div>
 
