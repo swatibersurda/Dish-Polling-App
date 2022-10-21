@@ -36,10 +36,12 @@ export const Login = () => {
                 {/* <h1 className="heading">Please Login Here</h1> */}
                 <div className="labell">  <label >Enter Name:</label></div>
 
-                <input className="inputt" type={"text"} value={name} onChange={(e) => setName(e.target.value)} required />
+                <input className="inputt" placeholder="Enter Your UserName"
+                 type={"text"} value={name} onChange={(e) => setName(e.target.value)} required />
                 <div className="labell"> <label>Enter Password:</label></div>
 
-                <input className="inputt" type={"password"} value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <input className="inputt" placeholder="Enter Your Password"
+                 required type={"password"} value={password} onChange={(e) => setPassword(e.target.value)} required />
                 <input className="submitForm" type={"submit"} />
 
 

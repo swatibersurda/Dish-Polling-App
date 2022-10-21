@@ -33,10 +33,10 @@ export const PollPage = () => {
         if (rankOne && rankTwo && rankThree && user) {
             // {[dyanmicKey]: val}
             userSelectedData = {
-               id: user.id,
-                        [rankOne]: 30,
-                        [rankTwo]: rankOne === rankTwo ? 30 : 20,
-                        [rankThree]: rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
+                id: user.id,
+                [rankOne]: 30,
+                [rankTwo]: rankOne === rankTwo ? 30 : 20,
+                [rankThree]: rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
             }
             // console.log(rankOne, rankTwo, rankThree, user);
             arr.push(userSelectedData);
@@ -53,12 +53,12 @@ export const PollPage = () => {
             <NavBar />
             <div className="parentDiv">
                 <div className="polldiv">
-                    <h1>Poll for Top 3 Dishes </h1>
+                    <p className="headingPollPage">Poll for Top 3 Dishes </p>
                     {/* FIRST SELECT OR FIRST RANK */}
                     <form onSubmit={handleData}>
                         <div id="firstRank">
                             <select onChange={(e) => setRankOne(e.target.value)}>
-                                <option>SELECT_First_RANK</option>
+                                <option>SELECT-FIRST-RANK</option>
                                 {data.length > 0 && data.map((item) => {
 
                                     return <option key={item.id} value={item.dishName}>{item.dishName}</option>
@@ -84,12 +84,12 @@ export const PollPage = () => {
                             </select>
                         </div>
 
-                        <input type={"submit"} value="Your Submission" />
+                        <input className="selctInputPollpage" type={"submit"} value="Your Submission" />
                     </form>
                 </div>
                 <div className="apiDiv">
                     {data.length > 0 && data.map((item) => {
-                        return <div key={item.id}><Card item={item} key={item.id} /></div>
+                        return <Card item={item} key={item.id} />
                     })}
                 </div>
 
