@@ -2,8 +2,6 @@ import { useSelector } from "react-redux"
 import { NavBar } from "./NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
-import { EditPage } from "./EditPage";
-import { FinalResultPage } from "./FinalResultPage";
 
 export const ResultPage = () => {
     const data = useSelector((state) => state.AppReducer.data);
@@ -30,7 +28,6 @@ export const ResultPage = () => {
         // here using filter we will find user based on his/her id and try to edit it.
         if (savedUserRank && user) {
             let savedData = [];
-            let userChoice = {};
             const x = savedUserRank.filter((item) => {
                 if (item.id === user.id) {
                     // if that paticular user found then please edit it and store it inside savedData array.
@@ -67,24 +64,23 @@ export const ResultPage = () => {
 
     useEffect(() => {
         //   an empty object where we will put here so that we can add the key value and add it up.
-        const met = {};
+        const objj = {};
         if (savedUserRank.length > 0) {
             savedUserRank.map((item) => {
-                let keyss = Object.keys(item);
                 for (const [key, value] of Object.entries(item)) {
                     var keyy = key;
                     if (keyy !== "id") {
-                        if (met[keyy] === undefined) {
-                            met[keyy] = value
+                        if (objj[keyy] === undefined) {
+                            objj[keyy] = value
                         }
                         else {
-                            met[keyy] = met[keyy] + value;
+                            objj[keyy] = objj[keyy] + value;
                         }
                     }
                 }
             })
 
-            setTopedRanked(met);
+            setTopedRanked(objj);
 
             // console.log("sortable", sortable);
 

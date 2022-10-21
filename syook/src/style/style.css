@@ -1,32 +1,70 @@
-
-
 .navBar {
-    margin-top: 0px;
-    background-image: linear-gradient(to right,gray,yellow,pink);
-}
-    
-.navBar ul{
-    overflow: auto;
+    /* background-image:linear-gradient(to right,crimson,purple,green); */
+    background-color: black;
+    overflow: hidden;
+    height: 50px;
 }
 
-.navBar li  {
-    float: left;
-    list-style: none;
-    color:white;
-    margin:13px 20px;
-   
-}
-
-.navBar li a{
-    padding: 10px 10px;
+.navBar a {
+    padding: 14px 16px;
     text-decoration: none;
-    color:crimson;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    display: block;
+    float: left;
+}
+
+/* form */
+.formmDiv{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    width:35%;
+    height: 350px;
+    margin:auto;
+    margin-top: 7%;
+}
+.heading{
+    margin-top: 2%;
+}
+.inputt{
+    width:100%;
+    height:40px;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-top: 2%;
 
 }
-.navBar li a:hover{
-  color: crimson;
+.labell{
+width:100%;
+height:20px;
+text-align: left;
+margin-top:1% ;
+}
+label{
+    font-weight: 600;
+    font-size: 18px;
+}
+.submitForm{
+    width:100%;
+    height:40px;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-top: 9%;
+    color:white;
+    background-color: #4267B2;
+    border: none;
+}
+.submitForm:hover{
+    background-color:crimson;
+    color:white;
+    cursor: pointer;
 }
 
+
+
+/* nav bar finished */
 .parentDiv {
     width: 100%;
     margin-top: 2%;
@@ -34,6 +72,7 @@
     border: none;
     display: flex;
 }
+
 
 .apiDiv {
     display: grid;
@@ -75,4 +114,46 @@
     height: 100%;
     border: 1px solid red;
     margin-left: 3%;
+}
+
+/* navbar responsivness */
+@media only screen and(min-width:378px)and(max-width:768px) {
+    .navBar {
+        /* background-image:linear-gradient(to right,crimson,purple,green); */
+        background-color: black;
+        overflow: hidden;
+        height: 50px;
+        width: 100%;
+    }
+
+    .navBar a {
+        padding: 14px 16px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        display: block;
+        float: left;
+    }
+
+}
+
+@media only screen and(min-width:0px)and(max-width:375px) {
+    .navBar {
+        /* background-image:linear-gradient(to right,crimson,purple,green); */
+        background-color: black;
+        overflow: hidden;
+        height: 50px;
+
+    }
+
+    .navBar a {
+        padding: 14px 16px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        /* display: block; */
+        float: left;
+    }
 }
