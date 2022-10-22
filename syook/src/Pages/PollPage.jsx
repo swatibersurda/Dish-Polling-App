@@ -52,7 +52,7 @@ export const PollPage = () => {
         <div>
             <NavBar />
             <div className="parentDiv">
-                <div className="polldiv">
+                <div className="pollDiv">
                     <p className="headingPollPage">Poll for Top 3 Dishes </p>
                     {/* FIRST SELECT OR FIRST RANK */}
                     <form onSubmit={handleData}>

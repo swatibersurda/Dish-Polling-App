@@ -142,12 +142,12 @@ export const ResultPage = () => {
       {/* nav bar placeing */}
       <NavBar />
       <div className="resultParentDiv">
-        <div className="polldiv">
+        <div className="pollDiv">
           <p className="headingPollPage">Edit Poll Here</p>
           <form onSubmit={handleData}>
             <div id="firstRank">
               <select onChange={(e) => setRankOne(e.target.value)}>
-                <option>SELECT_First_RANK</option>
+                <option>SELECT-First-RANK</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (

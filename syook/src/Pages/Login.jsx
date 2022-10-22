@@ -41,7 +41,7 @@ export const Login = () => {
                 <div className="labell"> <label>Enter Password:</label></div>
 
                 <input className="inputt" placeholder="Enter Your Password"
-                 required type={"password"} value={password} onChange={(e) => setPassword(e.target.value)} required />
+                 required type={"password"} value={password} onChange={(e) => setPassword(e.target.value)} />
                 <input className="submitForm" type={"submit"} />
 
 
