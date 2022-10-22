@@ -41,48 +41,37 @@ I have added  Poll Page section to the navbar.
 Left Section:User can or can not  Edit  top 3 Dishes as per his choice from the provided choices.
 Right Section:Displaying rank of Dishes Polled by all users inculding logged-in user .
 
-![Myntra_Favourite_Page](https://user-images.githubusercontent.com/95853553/158966631-ef08606f-8ebc-4758-b502-d40ac8811a17.PNG)
+![Result_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/ResultPage.PNG?raw=true)
 
-## Cart Section :
-When we use the Add to Bag button to add certain things, the products we choose will appear in the Cart Section.
-Users can take advantage of the bank's offered offers in this section. We also have some coupons for additional savings.
 
-![Myntra_Cart_Page](https://user-images.githubusercontent.com/95853553/158794171-dec31549-6a56-4537-ab00-83ce8e44c6f1.png)
 
-## Payment Page :
-Users can choose their preferred method of product payment here. This page's key feature is UPI Payment, which redirects customers to the final payment page when they select a method.
+## Usage :
+1.npm i
+2.npm i -g json server to start local db.json for Login as there is no Backend.
+3.npm start to run react app
+4.npm run server to run local server.
 
-![Myntra_Payment_Page](https://user-images.githubusercontent.com/95853553/158794225-237f3701-2376-46e2-aa0f-af3ba3651bae.png)
-![Myntra_Coupons](https://user-images.githubusercontent.com/95853553/158794253-3bd12a6c-1296-430c-9d75-230bfcb402f1.png)
 
-## Login and Create Account :
-User can  login into their account.
-The registration process for new users will be completed here, and we have done our best to make it as simple as possible.
 
-![Myntra_Login_Page](https://user-images.githubusercontent.com/95853553/158966949-50fd9824-6590-48e1-8cf2-45e3a37f19b4.PNG)
 
-## Order or History Section :
-The user can look up their order history and see all of the details.
 
-![Myntra_History_Page](https://user-images.githubusercontent.com/95853553/158794301-e175e8eb-ce6a-41b5-831f-e4b46a055719.png)
 
-## Profile Edit Section :
-The user can edit his all profile information.
 
-![Myntra_Profile_Edit](https://user-images.githubusercontent.com/95853553/158969606-71fee828-124f-4224-9fbc-53379659f01c.PNG)
+
+
+
 
 ## Responsive :
-Our website is responsive as well.
+ website is responsive as well.
 
 ## Contributors :
-3. [SWATI BERSURDA](https://github.com/swatibersurda)
+1. [SWATI BERSURDA](https://github.com/swatibersurda)
 
 
 
-6. MUKESH CHOUHAN
 
-## Our blog link :
-https://medium.com/@vantureprakash1903/construct-week-project-at-masai-myntra-clone-eb9f94a144e8
+
+
 
 ## Deploy Link :
 https://masai-myntra-clone.netlify.app/
