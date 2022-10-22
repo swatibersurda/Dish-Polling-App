@@ -23,7 +23,13 @@ export const ResultPage = () => {
     e.preventDefault();
 
     // here using filter we will find user based on his/her id and try to edit it.
-    if (savedUserRank && user&&rankOne!==""&&rankTwo!==""&&rankThree!=="") {
+    if (
+      savedUserRank &&
+      user &&
+      rankOne !== "" &&
+      rankTwo !== "" &&
+      rankThree !== ""
+    ) {
       let savedData = [];
       const x = savedUserRank.filter((item) => {
         if (item.id === user.id) {
@@ -53,11 +59,9 @@ export const ResultPage = () => {
       });
 
       localStorage.setItem("polledData", JSON.stringify(savedData));
+    } else {
+      alert("Select Top Three Choice from Edit Section ");
     }
-   else{
-    alert("Select Top Three Choice from Edit Section ");
-   } 
-
 
     var x = JSON.parse(localStorage.getItem("polledData"));
     setSavedUserRank(x);
@@ -224,18 +228,18 @@ export const ResultPage = () => {
               </tr>
             </thead>
             {/*mapping the final data.  */}
-            {final &&
-              final.map((item) => {
-                return (
-                  <tbody>
+            <tbody>
+              {final &&
+                final.map((item) => {
+                  return (
                     <tr key={item[0]}>
                       <td>{item[0]}</td>
                       <td>{item[1]}</td>
                       <td>{item[2]}</td>
                     </tr>
-                  </tbody>
-                );
-              })}
+                  );
+                })}
+            </tbody>
           </table>
         </div>
       </div>
