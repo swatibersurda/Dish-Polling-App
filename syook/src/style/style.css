@@ -370,7 +370,7 @@ td {
   }
 
   .selctInputPollpage:hover {
-    background-color: rgb(140, 140, 202);
+    background-color: #2d8cff;
     color: white;
     cursor: pointer;
   }

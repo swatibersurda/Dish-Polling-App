@@ -120,7 +120,11 @@ export const ResultPage = () => {
         let flag = false;
         for (let j = 0; j < userChoice.length; j++) {
           if (desending[i][0] === userChoice[j]) {
-            arr.push([desending[i][0], desending[i][1], "Your Choice"]);
+            arr.push([
+              desending[i][0],
+              desending[i][1],
+              "Your Choice Includes",
+            ]);
             flag = true;
             break;
           } else {

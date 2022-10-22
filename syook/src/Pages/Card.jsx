@@ -1,5 +1,4 @@
 export const Card = ({ item }) => {
-
   return (
     <div>
       <div className="imageDiv">
@@ -7,17 +6,13 @@ export const Card = ({ item }) => {
       </div>
       <div className="contentDiv">
         <div className="dishName">
-        <p id="dish">DishName:</p><p>{`${item.dishName}`}</p>
+          <p id="dish">DishName:</p>
+          <p>{`${item.dishName}`}</p>
         </div>
         <div className="dishDescription">
-        <p>{`  ${item.description}`}</p>
+          <p>{`  ${item.description}`}</p>
         </div>
       </div>
-
-
-
-
-
     </div>
-  )
-}
+  );
+};
