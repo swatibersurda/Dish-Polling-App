@@ -19,7 +19,7 @@ The following is the tech stack we used to build this website :-
 ## Login Page :
 User will Login by userName and password.
 
-![Myntra_Landing_Page](https://user-images.githubusercontent.com/95853553/158794037-6241ea4d-f40f-4ec5-9865-82d091195efc.png)
+![Myntra_Landing_Page](https://github.com/Omkar-WD/Myntra-Clone/blob/master/images/github.png?raw=true)
 
 ## Menu Section :
 We've added a Menu section to the navbar; hovering over the menu will reveal the area's categories and subcategories. You have to hover on MENS section and clicked on TSHIRTS section to see the product page.
