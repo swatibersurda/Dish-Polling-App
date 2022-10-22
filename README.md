@@ -25,17 +25,21 @@ After Suseccfull Login.
 
 ## Poll Page Section :
 I have added  Poll Page section to the navbar.
+
 Left Section:User can select top 3 Dishes as per his choice from the provided choices.
-Right Secion:Displaying Dishes on the App.
+Right Section:Displaying Dishes on the App.
 
 
 
 
-![Myntra_Product_Page](https://user-images.githubusercontent.com/95853553/158794120-0608559a-5c2b-451e-8b91-1ae885971c4f.png)
+![Poll_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/PollPage.PNG?raw=true)
 
 
-## WishList or Favourite Section :
-In the wishlist, users can add their favourite things or products.
+## Result Section :
+I have added  Poll Page section to the navbar.
+
+Left Section:User can or can not  Edit  top 3 Dishes as per his choice from the provided choices.
+Right Section:Displaying rank of Dishes Polled by all users inculding logged-in user .
 
 ![Myntra_Favourite_Page](https://user-images.githubusercontent.com/95853553/158966631-ef08606f-8ebc-4758-b502-d40ac8811a17.PNG)
 
