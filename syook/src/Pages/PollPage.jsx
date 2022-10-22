@@ -84,7 +84,7 @@ export const PollPage = () => {
                             </select>
                         </div>
 
-                        <input className="selctInputPollpage" type={"submit"} value="Your Submission" />
+                        <input className="selctInputPollpage" type={"submit"} value="Your Submission"/>
                     </form>
                 </div>
                 <div className="apiDiv">

@@ -197,7 +197,7 @@ export const ResultPage = () => {
             <input
               className="selctInputPollpage"
               type={"submit"}
-              value="Edit Your Submission"
+              value="Edit Submission"
             />
           </form>
         </div>
