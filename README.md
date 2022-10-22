@@ -1,4 +1,4 @@
-# PollDishName_App
+# Dish Polling App
 This App is Based on Dish polled by users he/she needs to select top three dishes from the selection provided.
 
 ## Tech Stack :
@@ -17,21 +17,22 @@ The following is the tech stack we used to build this website :-
 
 
 ## Login Page :
-User will Login by userName and password.
+User will Login by entering  userName and password.
 
-![Myntra_Landing_Page](https://github.com/Omkar-WD/Myntra-Clone/blob/master/images/github.png?raw=true)
+![Login_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/login.PNG?raw=true)
 
-## Menu Section :
-We've added a Menu section to the navbar; hovering over the menu will reveal the area's categories and subcategories. You have to hover on MENS section and clicked on TSHIRTS section to see the product page.
+After Suseccfull Login.
 
-## Product Page :
-Users can filter their product choices based on their needs in the brand, price, and discount sections, and sorting is also available. We've added products from the original website and divided them into categories.
+## Poll Page Section :
+I have added  Poll Page section to the navbar.
+Left Section:User can select top 3 Dishes as per his choice from the provided choices.
+Right Secion:Displaying Dishes on the App.
+
+
+
 
 ![Myntra_Product_Page](https://user-images.githubusercontent.com/95853553/158794120-0608559a-5c2b-451e-8b91-1ae885971c4f.png)
 
-## Product Details Page:
-On this page, the user can see all of the product's details, including images, name, seller, price, size, delivery options, and offers.
-Users can check for product availability in their area by entering their Pincode, and then add the item to their cart.
 
 ## WishList or Favourite Section :
 In the wishlist, users can add their favourite things or products.
