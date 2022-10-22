@@ -144,7 +144,7 @@ export const ResultPage = () => {
       <div className="resultParentDiv">
         {/* this section is for users editing so can change the selected ranking by his/her if wish. */}
         <div className="pollDiv">
-          <p className="headingPollPage">Edit Poll Here</p>
+          <p className="headingPollPage">Edit Your Poll Here</p>
           <form onSubmit={handleData}>
             <div id="firstRank">
               <select onChange={(e) => setRankOne(e.target.value)}>
@@ -164,7 +164,8 @@ export const ResultPage = () => {
               <select
                 onChange={(e) => {
                   setRankTwo(e.target.value);
-                }}>
+                }}
+              >
                 <option value={"none"}>Select-Second-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
@@ -181,7 +182,8 @@ export const ResultPage = () => {
               <select
                 onChange={(e) => {
                   setRankThree(e.target.value);
-                }}>
+                }}
+              >
                 <option value={"none"}>Select-Third-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
