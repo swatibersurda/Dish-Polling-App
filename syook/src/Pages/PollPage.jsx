@@ -45,9 +45,15 @@ export const PollPage = () => {
       // this to make users choice so we can refleact it on the page.
       localStorage.setItem("userChoice", JSON.stringify(userSelectedData));
     }
-
+         
     //  once user submit poll, NAVIGATE USER TO resultpage
-    navigate("/resultpage", { replace: true });
+    if(rankOne!=="" && rankTwo!==""&&rankThree!==""){
+        navigate("/resultpage", { replace: true });
+    }
+    else{
+        alert("Select All Top Three Dishes First For Poll Results");
+    }
+    
   };
   return (
     <div>
