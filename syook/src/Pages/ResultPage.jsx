@@ -23,7 +23,7 @@ export const ResultPage = () => {
     e.preventDefault();
 
     // here using filter we will find user based on his/her id and try to edit it.
-    if (savedUserRank&&user ) {
+    if (savedUserRank && user) {
       let savedData = [];
       const x = savedUserRank.filter((item) => {
         if (item.id === user.id) {
@@ -33,16 +33,17 @@ export const ResultPage = () => {
           userSelectedData = {
             //  here as per the problemstatement that if user select same rank on three means have pizza for all select
             // then only pizza will go else every three is different ,then three dishname with rank will go,else if any two same and one different
-            // then only two will go as per ternary condition that will be key. 
+            // then only two will go as per ternary condition that will be key.
             id: user.id,
             [rankOne]: 30,
             [rankTwo]: rankOne === rankTwo ? 30 : 20,
-            [rankThree]:rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
+            [rankThree]:
+              rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
           };
 
           savedData.push(userSelectedData);
-        //    here setting user's edited choice on ls oso that when we will try to make choice on resultPage we can use the
-        //   users choice or can display on ResultPage.
+          //    here setting user's edited choice on ls oso that when we will try to make choice on resultPage we can use the
+          //   users choice or can display on ResultPage.
           localStorage.setItem("userChoice", JSON.stringify(userSelectedData));
         } else {
           // if that is not user which we are seraching for please pushn inside savedData so that we can store
@@ -75,10 +76,7 @@ export const ResultPage = () => {
           }
         }
       });
-        //   now in Topped rank has objj
       setTopedRanked(objj);
-
-      // console.log("sortable", sortable);
     }
     // if user edit do render again and if the data is changed on polledData array.
   }, [savedUserRank]);
@@ -88,15 +86,14 @@ export const ResultPage = () => {
     if (toppedRanked) {
       // sortable is a array.
       let sortable = [];
-    //   need a array so that can push a key-value in side it 
+      //   need a array so that can push a key-value in side it
       for (var key in toppedRanked) {
         sortable.push([key, toppedRanked[key]]);
       }
-    //   sort array on the basis of first index as first index has score we need to show data on descending order. 
+      //   sort array on the basis of first index as first index has score we need to show data on descending order.
       sortable.sort(function (a, b) {
         return b[1] - a[1];
       });
-      // console.log("sortable", sortable);/
       setDesendin(sortable);
     }
   }, [toppedRanked]);
@@ -117,7 +114,6 @@ export const ResultPage = () => {
   useEffect(() => {
     // here compare users choice dishnme===descending's dishname making it your choice else making it other choice.
     let arr = [];
-    
 
     if (desending && userChoice) {
       for (let i = 0; i < desending.length; i++) {
@@ -168,8 +164,7 @@ export const ResultPage = () => {
               <select
                 onChange={(e) => {
                   setRankTwo(e.target.value);
-                }}
-              >
+                }}>
                 <option value={"none"}>Select-Second-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
@@ -186,8 +181,7 @@ export const ResultPage = () => {
               <select
                 onChange={(e) => {
                   setRankThree(e.target.value);
-                }}
-              >
+                }}>
                 <option value={"none"}>Select-Third-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
@@ -210,14 +204,13 @@ export const ResultPage = () => {
           <h1>Final Polled Result</h1>
           <hr className="hrr"></hr>
           <br />
-          <table  className="mainTable">
+          <table className="mainTable">
             <thead>
-                <tr>
+              <tr>
                 <th>DishName</th>
-              <th>Score</th>
-              <th>Selection By</th>
-                </tr>
-             
+                <th>Score</th>
+                <th>Selection By</th>
+              </tr>
             </thead>
             {/*mapping the final data.  */}
             {final &&

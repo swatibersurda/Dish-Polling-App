@@ -1,433 +1,392 @@
 .navBar {
-    /* background-image:linear-gradient(to right,crimson,purple,green); */
-    background-color: #4267B2;
-    overflow: hidden;
-    height: 50px;
+  /* background-image:linear-gradient(to right,crimson,purple,green); */
+  background-color: #4267b2;
+  overflow: hidden;
+  height: 50px;
 }
 
 .navBar a {
-    padding: 14px 16px;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    font-size: 15px;
-    display: block;
-    float: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  display: block;
+  float: left;
 }
 
 /* form */
 .formmDiv {
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 20px;
-    width: 35%;
-    height: 350px;
-    margin: auto;
-    margin-top: 7%;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px;
+  width: 35%;
+  height: 350px;
+  margin: auto;
+  margin-top: 7%;
 }
 
 .heading {
-    margin-top: 2%;
-    font-weight: 700;
-    font-size: 32px;
+  margin-top: 2%;
+  font-weight: 700;
+  font-size: 32px;
 }
 
 .inputt {
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    font-size: 20px;
-    margin-top: 2%;
-
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 20px;
+  margin-top: 2%;
 }
 
 .labell {
-    width: 100%;
-    height: 20px;
-    text-align: left;
-    margin-top: 1%;
+  width: 100%;
+  height: 20px;
+  text-align: left;
+  margin-top: 1%;
 }
 
 label {
-    font-weight: 600;
-    font-size: 18px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .submitForm {
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    font-size: 15px;
-    margin-top: 9%;
-    color: white;
-    background-color: #4267B2;
-    border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 15px;
+  margin-top: 9%;
+  color: white;
+  background-color: #4267b2;
+  border: none;
 }
 
 .submitForm:hover {
-    background-color:#2D8CFF;
-    color: white;
-    cursor: pointer;
+  background-color: #2d8cff;
+  color: white;
+  cursor: pointer;
 }
-
-
 
 /* POLL PAGE STARTS */
 .parentDiv {
-    width: 100%;
-    margin-top: 3%;
-    height: 500px;
-    border: none;
-    display: flex;
+  width: 100%;
+  margin-top: 3%;
+  height: 500px;
+  border: none;
+  display: flex;
 }
 
 /* POLL DIV */
 
 .pollDiv {
-    width: 25%;
-    margin-left: 1%;
-    height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    /* border: 1px solid black; */
+  width: 25%;
+  margin-left: 1%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* border: 1px solid black; */
 }
 
 select {
-    width: 70%;
-    height: 30px;
-    margin-bottom: 2%;
-    border: none;
-    font-weight:600;
-    font-size: 17px;
-        
-
+  width: 70%;
+  height: 30px;
+  margin-bottom: 2%;
+  border: none;
+  font-weight: 600;
+  font-size: 17px;
 }
 
-
 .selctInputPollpage {
-    width: 70%;
-    height: 30px;
-    margin-top: 20%;
-    height: 40px;
-    background-color: #4267B2;
-    color: white;
-    border-radius: 4px;
-    border: none;
-
+  width: 70%;
+  height: 30px;
+  margin-top: 20%;
+  height: 40px;
+  background-color: #4267b2;
+  color: white;
+  border-radius: 4px;
+  border: none;
 }
 
 .selctInputPollpage:hover {
-    background-color:#2D8CFF;;
-    color: black;
+  background-color: #2d8cff;
+  color: black;
 }
 
 .headingPollPage {
-    font-size: 32px;
-    font-weight: 700;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .imageDiv {
-    width: 100%;
-    height: 50%;
-   
+  width: 100%;
+  height: 50%;
 }
 
 img {
-    width: 99%;
-    height: 100%;
+  width: 99%;
+  height: 100%;
 }
 
 .contentDiv {
-    width: 100%;
-    height: 50%;
-    text-align: center;
-
-
+  width: 100%;
+  height: 50%;
+  text-align: center;
 }
 
 .contentDiv div {
-    margin-left: 2%;
+  margin-left: 2%;
 }
 
 .contentDiv p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .dishName {
-    text-align: left;
-    display: flex;
+  text-align: left;
+  display: flex;
 }
 
 .dishDescription {
-    margin-top: 1%;
-    text-align: left;
-    color: #4267B2;
-
+  margin-top: 1%;
+  text-align: left;
+  color: #4267b2;
 }
 
 #dish {
-    font-weight: 700;
-    margin-right: 2%;
+  font-weight: 700;
+  margin-right: 2%;
 }
 
 /* API DIV */
 
 .apiDiv {
-    display: grid;
-    width: 68%;
-    height: 100%;
-    border: none;
-    margin-left: 3%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 2%;
-    justify-content: center;
+  display: grid;
+  width: 68%;
+  height: 100%;
+  border: none;
+  margin-left: 3%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2%;
+  justify-content: center;
 }
 
-.apiDiv>div {
-   
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
-  
-
-
+.apiDiv > div {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
 }
-h1{
-    color:#4267B2 ;
+h1 {
+  color: #4267b2;
+  margin-top: 5%;
 }
-
 
 /* RESULT PAGE START */
 .resultParentDiv {
-    width: 100%;
-    height: 500px;
-    /* border: 1px solid green; */
-    margin-top: 3%;
-    display: flex;
+  width: 100%;
+  height: 500px;
+  /* border: 1px solid green; */
+  margin-top: 3%;
+  display: flex;
 }
 
 /* EDIT RESULT DIV */
 .editPollPage {
-    width: 30%;
-    height: 100%;
-    /* border: 1px solid yellow; */
+  width: 30%;
+  height: 100%;
+  /* border: 1px solid yellow; */
 }
 
 /* EDIT POLL DIV */
 .polledResults {
-    width: 68%;
-    height: 200%;
-    border: 1px solid #4267B2;
-    margin-left: 3%;
+  width: 68%;
+  height: 200%;
+  border: 1px solid #4267b2;
+  margin-left: 3%;
 }
 
 /* RESULTPAGE TABLE STYLING */
 table {
-    margin: auto;
-    width: 100%;
+  margin: auto;
+  width: 100%;
 }
-
 
 th,
 td {
-    border: 1px solid #4267B2;
-    padding: 5px;
+  border: 1px solid #4267b2;
+  padding: 5px;
 }
 
-td{
-    color: #4267B2;
-    font-weight: 700;
+td {
+  color: #4267b2;
+  font-weight: 700;
 }
 
-.polledResults> table{
+.polledResults > table {
+  width: 80%;
+}
+
+.hrr {
+  width: 50%;
+  background-color: black;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 499px) {
+  .formmDiv {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
     width: 80%;
-}
+    height: 350px;
+    margin-left: 5%;
+    margin-top: 27%;
+  }
 
-.hrr{
-    width: 50%;
-    background-color: black;
-}
+  .heading {
+    font-weight: 700;
+    font-size: 28px;
+  }
 
+  /* pollpage */
+  .pollDiv {
+    width: 30%;
+    margin-left: 0.4%;
+    height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid black;
+  }
 
+  .apiDiv {
+    display: grid;
+    width: 70%;
+    height: 100%;
+    border: none;
+    margin-left: 1%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2%;
+  }
 
+  .apiDiv > div {
+    /* border: 1px solid green; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
+  }
 
-
-
-
-@media only screen and (min-width:0px) and (max-width:499px) {
-    .formmDiv {
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        padding: 20px;
-        width: 80%;
-        height: 350px;
-        margin-left: 5%;
-        margin-top: 27%;
-    }
-
-    .heading {
-
-        font-weight: 700;
-        font-size: 28px;
-    }
-
-    /* pollpage */
-    .pollDiv {
-        width: 30%;
-        margin-left: 0.4%;
-        height: 80%;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border: 1px solid black;
-    }
-
-    .apiDiv {
-        display: grid;
-        width: 70%;
-        height: 100%;
-        border: none;
-        margin-left: 1%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
-        grid-gap: 2%;
-    }
-
-    .apiDiv>div {
-        /* border: 1px solid green; */
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
-
-
-    }
-
-    select {
+  select {
     width: 98%;
     height: 40px;
     margin-bottom: 2%;
     border: none;
     font-weight: 600;
     font-size: 14px;
-     
-    }
-    
+  }
 
-    .selctInputPollpage {
-        width: 100%;
-        height: 30px;
-        margin-top: 20%;
-        height: 40px;
-        background-color: #4267B2;
-        color: white;
-        border-radius: 4px;
-        border: none;
+  .selctInputPollpage {
+    width: 100%;
+    height: 30px;
+    margin-top: 20%;
+    height: 40px;
+    background-color: #4267b2;
+    color: white;
+    border-radius: 4px;
+    border: none;
+  }
 
-    }
+  .selctInputPollpage:hover {
+    background-color: #2d8cff;
+    color: white;
+    cursor: pointer;
+  }
 
-    .selctInputPollpage:hover {
-        background-color:#2D8CFF;
-        color: white;
-        cursor: pointer;
-    }
-
-    .headingPollPage {
-        font-size: 22px;
-        font-weight: 700;
-    }
-    .contentDiv p {
-        font-size: 16px;
-    }
-
-
+  .headingPollPage {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .contentDiv p {
+    font-size: 16px;
+  }
 }
 
-@media only screen and (min-width:499px) and (max-width:900px) {
-    .formmDiv {
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        padding: 20px;
-        width: 80%;
-        height: 350px;
-        margin-left: 7%;
-        margin-top: 17%;
-    }
+@media only screen and (min-width: 499px) and (max-width: 900px) {
+  .formmDiv {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    width: 80%;
+    height: 350px;
+    margin-left: 7%;
+    margin-top: 17%;
+  }
 
-    .heading {
+  .heading {
+    font-weight: 700;
+    font-size: 30px;
+  }
 
-        font-weight: 700;
-        font-size: 30px;
-    }
+  /* POLLPAGE RESPONSINES */
+  .pollDiv {
+    width: 28%;
+    margin-left: 0.4%;
+    height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid black;
+  }
 
-    /* POLLPAGE RESPONSINES */
-    .pollDiv {
-        width: 28%;
-        margin-left: 0.4%;
-        height: 80%;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border: 1px solid black;
-    }
+  .apiDiv {
+    display: grid;
+    width: 70%;
+    height: 100%;
+    border: none;
+    margin-left: 1%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2%;
+  }
 
-    .apiDiv {
-        display: grid;
-        width: 70%;
-        height: 100%;
-        border: none;
-        margin-left: 1%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        grid-gap: 2%;
-    }
+  .apiDiv > div {
+    /* border: 1px solid green; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
+  }
 
-    .apiDiv>div {
-        /* border: 1px solid green; */
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
-        
+  select {
+    width: 90%;
+    height: 30px;
+    margin-bottom: 2%;
+    font-size: 15px;
+    border: none;
+    font-weight: 600;
+  }
 
+  .selctInputPollpage {
+    width: 90%;
+    height: 30px;
+    margin-top: 20%;
+    height: 40px;
+    background-color: #4267b2;
+    color: white;
+    border-radius: 4px;
+    border: none;
+  }
 
-    }
+  .selctInputPollpage:hover {
+    background-color: rgb(140, 140, 202);
+    color: white;
+    cursor: pointer;
+  }
 
-    select {
-         width: 90%;
-        height: 30px;
-        margin-bottom: 2%;
-        font-size: 15px; 
-        border: none;
-       font-weight:600;
-    
-       
-    }
-
-
-    .selctInputPollpage {
-        width: 90%;
-        height: 30px;
-        margin-top: 20%;
-        height: 40px;
-        background-color: #4267B2;
-        color: white;
-        border-radius: 4px;
-        border: none;
-
-    }
-
-    .selctInputPollpage:hover {
-        background-color: rgb(140, 140, 202);
-        color: white;
-        cursor: pointer;
-    }
-
-    .headingPollPage {
-        font-size: 22px;
-        font-weight: 700;
-    }
-    .contentDiv p {
-        font-size: 14px;
-    }
-    .polledResults {
-        width: 78%;
-        height: 200%;
-        border: 1px solid #4267B2;
-        margin-left: 3%;
-    }
-    .hrr{
-      width: 50%;
-    }
-    
-
-
+  .headingPollPage {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .contentDiv p {
+    font-size: 14px;
+  }
+  .polledResults {
+    width: 78%;
+    height: 200%;
+    border: 1px solid #4267b2;
+    margin-left: 3%;
+  }
+  .hrr {
+    width: 50%;
+  }
 }
