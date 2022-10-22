@@ -23,13 +23,7 @@ export const ResultPage = () => {
     e.preventDefault();
 
     // here using filter we will find user based on his/her id and try to edit it.
-    if (
-      savedUserRank &&
-      user &&
-      rankOne !== "" &&
-      rankTwo !== "" &&
-      rankThree !== ""
-    ) {
+    if (savedUserRank&&user ) {
       let savedData = [];
       const x = savedUserRank.filter((item) => {
         if (item.id === user.id) {
@@ -37,16 +31,18 @@ export const ResultPage = () => {
           // console.log("hii")
           let userSelectedData = {};
           userSelectedData = {
-            // here with because
+            //  here as per the problemstatement that if user select same rank on three means have pizza for all select
+            // then only pizza will go else every three is different ,then three dishname with rank will go,else if any two same and one different
+            // then only two will go as per ternary condition that will be key. 
             id: user.id,
             [rankOne]: 30,
             [rankTwo]: rankOne === rankTwo ? 30 : 20,
-            [rankThree]:
-              rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
+            [rankThree]:rankThree === rankOne ? 30 : rankTwo === rankThree ? 20 : 10,
           };
 
           savedData.push(userSelectedData);
-          // here setting user's edited choice on ls
+        //    here setting user's edited choice on ls oso that when we will try to make choice on resultPage we can use the
+        //   users choice or can display on ResultPage.
           localStorage.setItem("userChoice", JSON.stringify(userSelectedData));
         } else {
           // if that is not user which we are seraching for please pushn inside savedData so that we can store
@@ -57,13 +53,15 @@ export const ResultPage = () => {
 
       localStorage.setItem("polledData", JSON.stringify(savedData));
     }
-    var x = JSON.parse(localStorage.getItem("polledData")) || savedUserRank;
+    var x = JSON.parse(localStorage.getItem("polledData"));
     setSavedUserRank(x);
   };
 
   useEffect(() => {
-    //   an empty object where we will put here so that we can add the key value and add it up.
+    //   an empty object where we will put here so that we can add the key value and add it up,here making and adding all users polled data
+    // and making there total and unique.
     const objj = {};
+    // if we have savedUserRank means polled by users in localStorage and have a current user for edit then please make them unique and add same key value.
     if (savedUserRank.length > 0) {
       savedUserRank.map((item) => {
         for (const [key, value] of Object.entries(item)) {
@@ -77,7 +75,7 @@ export const ResultPage = () => {
           }
         }
       });
-
+        //   now in Topped rank has objj
       setTopedRanked(objj);
 
       // console.log("sortable", sortable);
@@ -86,12 +84,15 @@ export const ResultPage = () => {
   }, [savedUserRank]);
 
   useEffect(() => {
+    // in this useEffect setting topedRanked key-value in descending order.
     if (toppedRanked) {
       // sortable is a array.
       let sortable = [];
+    //   need a array so that can push a key-value in side it 
       for (var key in toppedRanked) {
         sortable.push([key, toppedRanked[key]]);
       }
+    //   sort array on the basis of first index as first index has score we need to show data on descending order. 
       sortable.sort(function (a, b) {
         return b[1] - a[1];
       });
@@ -101,6 +102,7 @@ export const ResultPage = () => {
   }, [toppedRanked]);
 
   useEffect(() => {
+    // in this use Effect we are finding current user choice.
     let choice = JSON.parse(localStorage.getItem("userChoice"));
     let arr = [];
     for (let key in choice) {
@@ -113,7 +115,9 @@ export const ResultPage = () => {
   }, [desending]);
 
   useEffect(() => {
+    // here compare users choice dishnme===descending's dishname making it your choice else making it other choice.
     let arr = [];
+    
 
     if (desending && userChoice) {
       for (let i = 0; i < desending.length; i++) {
@@ -142,12 +146,13 @@ export const ResultPage = () => {
       {/* nav bar placeing */}
       <NavBar />
       <div className="resultParentDiv">
+        {/* this section is for users editing so can change the selected ranking by his/her if wish. */}
         <div className="pollDiv">
           <p className="headingPollPage">Edit Poll Here</p>
           <form onSubmit={handleData}>
             <div id="firstRank">
               <select onChange={(e) => setRankOne(e.target.value)}>
-                <option>SELECT-First-RANK</option>
+                <option>Select-First-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (
@@ -165,7 +170,7 @@ export const ResultPage = () => {
                   setRankTwo(e.target.value);
                 }}
               >
-                <option value={"none"}>SELECT-SECOND-RANK</option>
+                <option value={"none"}>Select-Second-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (
@@ -183,7 +188,7 @@ export const ResultPage = () => {
                   setRankThree(e.target.value);
                 }}
               >
-                <option value={"none"}>SELECT-THIRD-RANK</option>
+                <option value={"none"}>Select-Third-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (
@@ -207,11 +212,14 @@ export const ResultPage = () => {
           <br />
           <table  className="mainTable">
             <thead>
-              <th>DishName</th>
+                <tr>
+                <th>DishName</th>
               <th>Score</th>
               <th>Selection By</th>
+                </tr>
+             
             </thead>
-
+            {/*mapping the final data.  */}
             {final &&
               final.map((item) => {
                 return (

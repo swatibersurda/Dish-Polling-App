@@ -65,7 +65,7 @@ label {
 }
 
 .submitForm:hover {
-    background-color: rgb(140, 140, 202);
+    background-color:#2D8CFF;
     color: white;
     cursor: pointer;
 }
@@ -88,13 +88,13 @@ label {
     margin-left: 1%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 select {
     width: 70%;
     height: 30px;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     border: none;
     font-weight:600;
     font-size: 17px;
@@ -116,7 +116,7 @@ select {
 }
 
 .selctInputPollpage:hover {
-    background-color: rgb(140, 140, 202);
+    background-color:#2D8CFF;;
     color: black;
 }
 
@@ -190,7 +190,9 @@ img {
 
 
 }
-
+h1{
+    color:#4267B2 ;
+}
 
 
 /* RESULT PAGE START */
@@ -318,7 +320,7 @@ td{
     }
 
     .selctInputPollpage:hover {
-        background-color: rgb(140, 140, 202);
+        background-color:#2D8CFF;
         color: white;
         cursor: pointer;
     }
@@ -374,6 +376,7 @@ td{
     .apiDiv>div {
         /* border: 1px solid green; */
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
+        
 
 
     }
@@ -388,6 +391,7 @@ td{
     
        
     }
+
 
     .selctInputPollpage {
         width: 90%;

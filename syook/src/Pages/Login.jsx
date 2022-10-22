@@ -30,22 +30,25 @@ export const Login = () => {
     }
 
     return (
+        <>
+        <h1>Dish Polling App</h1>
         <div className="formmDiv">
             <p className="heading">Please Login Here</p>
             <form onSubmit={handleData} className="formm" >
                 {/* <h1 className="heading">Please Login Here</h1> */}
                 <div className="labell">  <label >Enter Name:</label></div>
-
-                <input className="inputt" placeholder="Enter Your UserName"
+                   {/* input tag for username */}
+                <input className="inputt" placeholder="UserName"
                  type={"text"} value={name} onChange={(e) => setName(e.target.value)} required />
                 <div className="labell"> <label>Enter Password:</label></div>
-
-                <input className="inputt" placeholder="Enter Your Password"
+                 {/* input for password */}
+                <input className="inputt" placeholder="Password"
                  required type={"password"} value={password} onChange={(e) => setPassword(e.target.value)} />
                 <input className="submitForm" type={"submit"} />
 
 
             </form>
         </div>
+        </>
     )
 }
