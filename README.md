@@ -21,7 +21,7 @@ User will Login by entering his/her  userName and password.
 
 ![Login_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/login.PNG?raw=true)
 
-After Suseccfull Login.............
+After Successfully Login.............
 
 ## Poll Page Section :
 I have added  Poll Page section to the navbar.
@@ -75,7 +75,7 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 
 
 ## Deploy Link :
-https://masai-myntra-clone.netlify.app/
+https://dish-polling-app-swati-bersurda.netlify.app/
 
 ## Clone Dish Polling App :
-   https://github.com/swatibersurda/PollDishName_App.git
+  https://github.com/swatibersurda/Dish-Polling-App.git
