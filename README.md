@@ -65,7 +65,7 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 ## Responsive :
  website is responsive as well.
 
-## Contributors :
+## Contributor :
 1. [SWATI BERSURDA](https://github.com/swatibersurda)
 
 
