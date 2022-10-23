@@ -36,7 +36,7 @@ Right Section:Displaying Dishes on the App which is fetched from backend.
 
 
 ## Result Section :
-I have added  Poll Page section to the navbar.
+I have added  Result Page section to the navbar.
 
 Left Section:User can or can not  Edit  top 3 Dishes as per his choice from the provided choices.
 Right Section:Displaying rank of Dishes Polled by all users inculding logged-in user .
