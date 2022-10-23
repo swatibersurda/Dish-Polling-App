@@ -75,7 +75,7 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 
 
 ## Deploy Link :
-https://dish-polling-app-swati-bersurda.netlify.app/
+https://dish-poll-app-swati-bersurda.netlify.app/
 
 ## Clone Dish Polling App :
-  https://dish-poll-app-swati-bersurda.netlify.app/
+  https://github.com/swatibersurda/Dish-Polling-App.git
