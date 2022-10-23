@@ -18,6 +18,7 @@ export const ResultPage = () => {
   const [rankOne, setRankOne] = useState("");
   const [rankTwo, setRankTwo] = useState("");
   const [rankThree, setRankThree] = useState("");
+  console.log(rankOne,rankTwo,rankThree,"resultpage")
 
   const handleData = (e) => {
     e.preventDefault();
@@ -161,7 +162,7 @@ export const ResultPage = () => {
           <form onSubmit={handleData}>
             <div id="firstRank">
               <select onChange={(e) => setRankOne(e.target.value)}>
-                <option>Select-First-Rank</option>
+                <option value="">Select-First-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (
@@ -179,7 +180,7 @@ export const ResultPage = () => {
                   setRankTwo(e.target.value);
                 }}
               >
-                <option value={"none"}>Select-Second-Rank</option>
+                <option value="">Select-Second-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (
@@ -197,7 +198,7 @@ export const ResultPage = () => {
                   setRankThree(e.target.value);
                 }}
               >
-                <option value={"none"}>Select-Third-Rank</option>
+                <option value="">Select-Third-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (
