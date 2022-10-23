@@ -78,4 +78,4 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 https://masai-myntra-clone.netlify.app/
 
 ## Clone Dish Polling App :
-   https://github.com/swatibersurda/PollDishName_App.git
+  https://github.com/swatibersurda/Dish-Polling-App.git
