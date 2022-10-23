@@ -14,7 +14,7 @@ export const PollPage = () => {
   const [rankThree, setRankThree] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(rankOne,rankTwo,rankThree,"pollpage")
+
   //  this useEffect first get the data from fetch on firs render and then will store on redux then we will display those
   // data on api section of this page
   useEffect(() => {
@@ -69,7 +69,7 @@ export const PollPage = () => {
                 {data.length > 0 &&
                   data.map((item) => {
                     return (
-                      <option key={item.id} value={item.dishName} >
+                      <option key={item.id} value={item.dishName}>
                         {item.dishName}
                       </option>
                     );
@@ -84,7 +84,7 @@ export const PollPage = () => {
                   setRankTwo(e.target.value);
                 }}
               >
-                <option value="" >Select-Second-Rank</option>
+                <option value="">Select-Second-Rank</option>
                 {data.length > 0 &&
                   data.map((item) => {
                     return (

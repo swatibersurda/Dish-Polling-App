@@ -18,7 +18,6 @@ export const ResultPage = () => {
   const [rankOne, setRankOne] = useState("");
   const [rankTwo, setRankTwo] = useState("");
   const [rankThree, setRankThree] = useState("");
-  console.log(rankOne,rankTwo,rankThree,"resultpage")
 
   const handleData = (e) => {
     e.preventDefault();
