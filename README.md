@@ -41,7 +41,7 @@ I have added  Poll Page section to the navbar.
 Left Section:User can or can not  Edit  top 3 Dishes as per his choice from the provided choices.
 Right Section:Displaying rank of Dishes Polled by all users inculding logged-in user .
 
-![Result_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/ResultPage.PNG?raw=true)
+![Result_Page](https://github.com/swatibersurda/Dish-Polling-App/blob/main/syook/src/images/result.PNG?raw=true)
 
 
 
