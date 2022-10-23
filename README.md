@@ -75,7 +75,7 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 
 
 ## Deploy Link :
-https://masai-myntra-clone.netlify.app/
+https://dish-polling-app-swati-bersurda.netlify.app/
 
 ## Clone Dish Polling App :
   https://github.com/swatibersurda/Dish-Polling-App.git
