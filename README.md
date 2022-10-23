@@ -17,17 +17,17 @@ The following is the tech stack we used to build this website :-
 
 
 ## Login Page :
-User will Login by entering  userName and password.
+User will Login by entering his/her  userName and password.
 
 ![Login_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/login.PNG?raw=true)
 
-After Suseccfull Login.
+After Suseccfull Login.............
 
 ## Poll Page Section :
 I have added  Poll Page section to the navbar.
 
-Left Section:User can select top 3 Dishes as per his choice from the provided choices.
-Right Section:Displaying Dishes on the App.
+Left Section:User can select top 3 Dishes as per his choice from the provided choices and as per the selection he/she will gets ranking and submit selection.
+Right Section:Displaying Dishes on the App which is fetched from backend.
 
 
 
@@ -50,8 +50,9 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 2.npm i -g json server to start local db.json for Login as there is no Backend.
 3.npm start to run react app
 4.npm run server to run local server.
-
-
+5.Login enter userName and Password.
+6.Poll Page select best three dishes as per your choice from the provided list of selection,if no choice is selected .
+7.Result Page If user wish can edit or can not edit,If user want to edit the selcetion then can edit as well and can see the result of Final Polling on the right side.
 
 
 
@@ -76,5 +77,5 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 ## Deploy Link :
 https://masai-myntra-clone.netlify.app/
 
-## Clone Myntra-Backend :
-    https://github.com/Omkar-WD/Myntra-Backend.git
+## Clone Dish Polling App :
+   https://github.com/swatibersurda/PollDishName_App.git
