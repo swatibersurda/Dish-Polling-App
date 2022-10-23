@@ -19,7 +19,7 @@ The following is the tech stack I used to build this website:-
 ## Login Page :
 The user will log in by entering his/her username and password.
 
-![Login_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/login.PNG?raw=true)
+![Login_Page](https://github.com/swatibersurda/Dish-Polling-App/blob/main/syook/src/images/loginn.PNG?raw=true)
 
 After Successfully Login redirected to Poll Page.............
 
