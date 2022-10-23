@@ -21,7 +21,7 @@ The user will log in by entering his/her username and password.
 
 ![Login_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/login.PNG?raw=true)
 
-After Successfully Login.............
+After Successfully Login redirected to Poll Page.............
 
 ## Poll Page Section :
 I have added the Poll Page section to the navbar.
