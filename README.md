@@ -2,7 +2,7 @@
 This App is Based on Dish polled by users he/she needs to select top three dishes from the selection provided.
 
 ## Tech Stack :
-The following is the tech stack we used to build this website :-
+The following is the tech stack I used to build this website :-
 
 <img src="https://cdn-icons-png.flaticon.com/512/226/226269.png" width=20/> HTML
 
