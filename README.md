@@ -51,7 +51,7 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 3.npm start to run react app
 4.npm run server to run local server.
 5.Login enter userName and Password.
-6.Poll Page select best three dishes as per your choice from the provided list of selection,if no choice is selected .
+6.Poll Page select best three dishes as per your choice from the provided list of selection,if no choice is selected then will show a alert box .
 7.Result Page If user wish can edit or can not edit,If user want to edit the selcetion then can edit as well and can see the result of Final Polling on the right side.
 
 
@@ -75,7 +75,7 @@ Right Section:Displaying rank of Dishes Polled by all users inculding logged-in 
 
 
 ## Deploy Link :
-https://dish-polling-app-swati-bersurda.netlify.app/
+https://dish-poll-app-swati-bersurda.netlify.app/
 
 ## Clone Dish Polling App :
   https://github.com/swatibersurda/Dish-Polling-App.git
