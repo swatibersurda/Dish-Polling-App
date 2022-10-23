@@ -1,4 +1,4 @@
-# PollDishName_App
+# Dish Polling App
 This App is Based on Dish polled by users he/she needs to select top three dishes from the selection provided.
 
 ## Tech Stack :
@@ -17,70 +17,65 @@ The following is the tech stack we used to build this website :-
 
 
 ## Login Page :
-User will Login by userName and password.
+User will Login by entering his/her  userName and password.
 
-![Myntra_Landing_Page](https://github.com/Omkar-WD/Myntra-Clone/blob/master/images/github.png?raw=true)
+![Login_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/login.PNG?raw=true)
 
-## Menu Section :
-We've added a Menu section to the navbar; hovering over the menu will reveal the area's categories and subcategories. You have to hover on MENS section and clicked on TSHIRTS section to see the product page.
+After Suseccfull Login.............
 
-## Product Page :
-Users can filter their product choices based on their needs in the brand, price, and discount sections, and sorting is also available. We've added products from the original website and divided them into categories.
+## Poll Page Section :
+I have added  Poll Page section to the navbar.
 
-![Myntra_Product_Page](https://user-images.githubusercontent.com/95853553/158794120-0608559a-5c2b-451e-8b91-1ae885971c4f.png)
+Left Section:User can select top 3 Dishes as per his choice from the provided choices and as per the selection he/she will gets ranking and submit selection.
+Right Section:Displaying Dishes on the App which is fetched from backend.
 
-## Product Details Page:
-On this page, the user can see all of the product's details, including images, name, seller, price, size, delivery options, and offers.
-Users can check for product availability in their area by entering their Pincode, and then add the item to their cart.
 
-## WishList or Favourite Section :
-In the wishlist, users can add their favourite things or products.
 
-![Myntra_Favourite_Page](https://user-images.githubusercontent.com/95853553/158966631-ef08606f-8ebc-4758-b502-d40ac8811a17.PNG)
 
-## Cart Section :
-When we use the Add to Bag button to add certain things, the products we choose will appear in the Cart Section.
-Users can take advantage of the bank's offered offers in this section. We also have some coupons for additional savings.
+![Poll_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/PollPage.PNG?raw=true)
 
-![Myntra_Cart_Page](https://user-images.githubusercontent.com/95853553/158794171-dec31549-6a56-4537-ab00-83ce8e44c6f1.png)
 
-## Payment Page :
-Users can choose their preferred method of product payment here. This page's key feature is UPI Payment, which redirects customers to the final payment page when they select a method.
+## Result Section :
+I have added  Poll Page section to the navbar.
 
-![Myntra_Payment_Page](https://user-images.githubusercontent.com/95853553/158794225-237f3701-2376-46e2-aa0f-af3ba3651bae.png)
-![Myntra_Coupons](https://user-images.githubusercontent.com/95853553/158794253-3bd12a6c-1296-430c-9d75-230bfcb402f1.png)
+Left Section:User can or can not  Edit  top 3 Dishes as per his choice from the provided choices.
+Right Section:Displaying rank of Dishes Polled by all users inculding logged-in user .
 
-## Login and Create Account :
-User can  login into their account.
-The registration process for new users will be completed here, and we have done our best to make it as simple as possible.
+![Result_Page](https://github.com/swatibersurda/PollDishName_App/blob/main/syook/src/images/ResultPage.PNG?raw=true)
 
-![Myntra_Login_Page](https://user-images.githubusercontent.com/95853553/158966949-50fd9824-6590-48e1-8cf2-45e3a37f19b4.PNG)
 
-## Order or History Section :
-The user can look up their order history and see all of the details.
 
-![Myntra_History_Page](https://user-images.githubusercontent.com/95853553/158794301-e175e8eb-ce6a-41b5-831f-e4b46a055719.png)
+## Usage :
+1.npm i
+2.npm i -g json server to start local db.json for Login as there is no Backend.
+3.npm start to run react app
+4.npm run server to run local server.
+5.Login enter userName and Password.
+6.Poll Page select best three dishes as per your choice from the provided list of selection,if no choice is selected .
+7.Result Page If user wish can edit or can not edit,If user want to edit the selcetion then can edit as well and can see the result of Final Polling on the right side.
 
-## Profile Edit Section :
-The user can edit his all profile information.
 
-![Myntra_Profile_Edit](https://user-images.githubusercontent.com/95853553/158969606-71fee828-124f-4224-9fbc-53379659f01c.PNG)
+
+
+
+
+
+
 
 ## Responsive :
-Our website is responsive as well.
+ website is responsive as well.
 
 ## Contributors :
-3. [SWATI BERSURDA](https://github.com/swatibersurda)
+1. [SWATI BERSURDA](https://github.com/swatibersurda)
 
 
 
-6. MUKESH CHOUHAN
 
-## Our blog link :
-https://medium.com/@vantureprakash1903/construct-week-project-at-masai-myntra-clone-eb9f94a144e8
+
+
 
 ## Deploy Link :
 https://masai-myntra-clone.netlify.app/
 
-## Clone Myntra-Backend :
-    https://github.com/Omkar-WD/Myntra-Backend.git
+## Clone Dish Polling App :
+   https://github.com/swatibersurda/PollDishName_App.git
