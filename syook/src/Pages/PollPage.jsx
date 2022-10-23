@@ -86,7 +86,7 @@ export const PollPage = () => {
               >
                 <option value="">Select-Second-Rank</option>
                 {data.length > 0 &&
-                  data.map((item) => {
+                  data.map((item) => { 
                     return (
                       <option key={item.id} value={item.dishName}>
                         {item.dishName}
@@ -94,7 +94,7 @@ export const PollPage = () => {
                     );
                   })}
               </select>
-            </div>
+            </div> 
             {/* third rank div */}
             <div id="thirdRank">
               <select
