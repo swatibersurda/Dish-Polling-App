@@ -65,7 +65,7 @@ Right Section: Displaying rank of Dishes Polled by all users including the logge
 ## Responsive :
  The web-app is responsive as well.
 
-## Contributors :
+## Contributor :
 1. [SWATI BERSURDA](https://github.com/swatibersurda)
 
 
